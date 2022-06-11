@@ -83,9 +83,8 @@ async function capture(orders, storage) {
             created_at: order.created_at,
         }
 
-        if (customerEmail !== undefined) {
-            // to update a user, shouldn't we send properties in $set? 
-            posthog.capture(customerRecordExists ? 'Updated Shopify Customer' : 'Created Shopify Customer', {
+        if (customerEmail !== undefined && !customerRecordExists) {
+            posthog.capture('Created Shopify Customer', {
                 distinct_id: order.customer.email,
                 $set : {
                     ...order.customer
