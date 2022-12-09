@@ -6,7 +6,7 @@
     "config": [
         {
             "key": "shopifyStore",
-            "name": "Shopify Store",
+            "name": "Shopify Store (not including '.myshopify.com' e.g. 'posthog', NOT 'posthog.myshopify.com')",
             "type": "string",
             "required": true
         },
