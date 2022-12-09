@@ -7,6 +7,7 @@
         {
             "key": "shopifyStore",
             "name": "Shopify Store",
+            "hint": "Store ID not including '.myshopify.com' (e.g. 'posthog', NOT 'posthog.myshopify.com')",
             "type": "string",
             "required": true
         },
